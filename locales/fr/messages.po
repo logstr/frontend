@@ -15,4 +15,4 @@ msgstr ""
 
 #: pages/auth/login.js:5
 msgid "Test Test"
-msgstr ""
+msgstr "Test by One"

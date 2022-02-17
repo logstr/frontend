@@ -2,15 +2,10 @@ import { I18nProvider } from "@lingui/react";
 import { i18n } from "@lingui/core";
 import { Reset } from 'styled-reset'
 
-import { useEffect } from "react";
 import useLocale from "../core/hooks/useLocale";
 
 export default function App({ Component, pageProps }) {
-  const locale = useLocale();
-
-  useEffect(() => {
-    locale.activate(locale.locale);
-  }, []);
+  useLocale();
 
   const getLayout = Component.getLayout || ((page) => page);
 

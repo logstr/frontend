@@ -1,1 +1,1 @@
-/*eslint-disable*/module.exports={messages:{"Test Test":"Test Test"}};
+/*eslint-disable*/module.exports={messages:{"Test Test":"Test by One"}};
