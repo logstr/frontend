@@ -1,8 +1,15 @@
 import AuthLayout from "../../core/layouts/Auth";
 import { Trans } from '@lingui/macro';
+import styled from "styled-components";
+
+const Title = styled.h1`
+  color: yellow;
+`;
 
 const Login = () => {
-  return <h1><Trans>Test Test</Trans></h1>
+  return <Title>
+    <Trans>Test Test</Trans>
+  </Title>
 }
 
 Login.getLayout = AuthLayout;

@@ -1,5 +1,6 @@
 import { I18nProvider } from "@lingui/react";
 import { i18n } from "@lingui/core";
+import { Reset } from 'styled-reset'
 
 import { useEffect } from "react";
 import useLocale from "../core/hooks/useLocale";
@@ -15,6 +16,7 @@ export default function App({ Component, pageProps }) {
 
   return (
     <I18nProvider i18n={i18n}>
+      <Reset />
       {getLayout(<Component {...pageProps} />)}
     </I18nProvider>
   );
