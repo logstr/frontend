@@ -3,11 +3,22 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "extract": "NODE_ENV=development lingui extract --clean",
+    "compile": "lingui compile && lingui compile"
   },
   "dependencies": {
+    "@lingui/react": "^3.13.2",
     "next": "latest",
     "react": "17.0.2",
     "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/plugin-proposal-class-properties": "^7.16.7",
+    "@babel/plugin-proposal-decorators": "^7.17.2",
+    "@lingui/cli": "^3.13.2",
+    "@lingui/macro": "^3.13.2",
+    "babel-plugin-macros": "^3.1.0"
   }
 }
