@@ -13,6 +13,42 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: pages/auth/login.js:5
-msgid "Test Test"
-msgstr "Test by One"
+#: core/components/organisms/auth/LoginForm.js:118
+msgid "Don’t have an account yet?"
+msgstr ""
+
+#: core/components/organisms/auth/LoginForm.js:69
+msgid "Hello Again!"
+msgstr ""
+
+#: core/components/organisms/auth/LoginForm.js:112
+msgid "Login"
+msgstr ""
+
+#: core/components/organisms/auth/LoginForm.js:72
+msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut tellus odio platea sagittis vel."
+msgstr ""
+
+#: core/components/organisms/auth/LoginForm.js:87
+msgid "Password"
+msgstr ""
+
+#: core/components/organisms/auth/LoginForm.js:106
+msgid "Recover password"
+msgstr ""
+
+#: core/components/organisms/auth/LoginForm.js:122
+msgid "Sign Up"
+msgstr ""
+
+#: core/components/organisms/auth/LoginForm.js:80
+msgid "User name"
+msgstr ""
+
+#: core/components/organisms/auth/LoginForm.js:100
+msgid "remember me"
+msgstr ""
+
+#: core/components/molecules/SocialButtons.js:17
+msgid "sign in with google"
+msgstr ""

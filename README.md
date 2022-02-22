@@ -1,1 +1,11 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+# Logstr
+## About
+
+## Project Structure
+
+## Useful Resources
+- [Grid System](https://sealninja.github.io/react-grid-system/#section-responsive-grid)
+
+## Testing
+
+## Deployment
