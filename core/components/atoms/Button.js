@@ -61,6 +61,11 @@ const Btn = styled.button`
     width: 100%;
     opacity: ${({ opaque }) => (opaque ? 0.3 : 1)};
   }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
 `;
 
 const Button = ({ children, ...props }) => {

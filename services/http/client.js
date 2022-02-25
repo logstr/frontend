@@ -46,7 +46,8 @@ export default class ApiClient {
   }
 
   get trailingSlash() {
-    return "/";
+    // return "/";
+    return "";
   }
 
   formUrl(url, query) {

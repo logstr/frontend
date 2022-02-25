@@ -4,7 +4,7 @@ import Button from "../atoms/Button";
 import Google from "@/public/images/auth/google.svg";
 import styled from "styled-components";
 
-const Content = styled.div`
+const Content = styled.span`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,7 +17,7 @@ const Content = styled.div`
 
 export const GoogleButton = ({ label = t`sign in with google` }) => {
   return (
-    <Button primary opaque>
+    <Button primary opaque type="button">
       <Content>
         <span className="logo">
           <Image src={Google} />

@@ -40,15 +40,19 @@ const variants = ({ variant = "regular-10" }) => {
   `;
 };
 
-const Text = styled.p`
-  color: var(--grey);
+const color = ({color}) => css`
+  color: var(--${color? color: 'grey'});
+`;
 
+const Text = styled.p`
+  ${color}
+  
   ${variants}
 `;
 
 export const Label = styled.label`
   ${variants({ variant: "regular-13" })}
-  color: var(--black);
+  ${color({color: 'black'})}
 `;
 
 export default Text;
