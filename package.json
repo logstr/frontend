@@ -6,7 +6,7 @@
     "start": "next start",
     "extract": "NODE_ENV=development lingui extract --clean",
     "compile": "lingui compile && lingui compile",
-    "lint": "next lint"
+    "lint": "next lint --fix"
   },
   "dependencies": {
     "@lingui/react": "^3.13.2",

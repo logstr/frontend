@@ -207,3 +207,5 @@ export default function Home() {
     </div>
   )
 }
+
+Home.Auth = true;

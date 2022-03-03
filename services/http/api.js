@@ -5,5 +5,5 @@ export const HTTP_STATUSES = Object.freeze({
   SUCCESS: "SUCCESS",
   ERROR: "ERROR",
 })
-const HttpClient = new ApiClient(process.env.NEXT_PUBLIC_API_URL + 'api/');
+const HttpClient = new ApiClient(process.env.NEXT_PUBLIC_API_URL + '/api/');
 export default HttpClient;

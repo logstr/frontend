@@ -13,6 +13,8 @@ import { large } from "utils/breakpoints";
 import useForm from "@/hooks/useForm";
 import useRequest from "@/hooks/useRequest";
 import { login } from "services/api/auth";
+import { signIn } from "services/authentication";
+import { useSessionRedirects } from "@/hooks/useSession";
 
 const Form = styled.form`
   text-align: center;
@@ -64,14 +66,16 @@ const CTA = styled(Text)`
 `;
 
 const LoginForm = () => {
-  const { isLoading, isError, send: sendLogin, response } = useRequest(login);
+  const { fromLogin } = useSessionRedirects();
+
+  function authenticate({email, password, remember}) {
+    return login(email, password, remember).then(signIn).then(fromLogin)
+  }
+
+  const { isLoading, isError, send: onSuccess, response } = useRequest(authenticate);
   const { values, submit, errors, setValue } = useForm({
     values: { email: "", password: "", remember: false },
-    onSuccess(values) {
-      sendLogin(values.email, values.password, values.remember).then(res => {
-        
-      });
-    },
+    onSuccess,
     validate,
   });
 

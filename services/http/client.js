@@ -1,3 +1,4 @@
+import storage from "../../utils/storage";
 export default class ApiClient {
   constructor(baseUrl) {
     this.baseUrl = baseUrl;
@@ -42,11 +43,11 @@ export default class ApiClient {
   }
 
   get authToken() {
-    return "";
+    const {token} = storage.get("token") || {};
+    return token;
   }
 
   get trailingSlash() {
-    // return "/";
     return "";
   }
 
@@ -73,9 +74,7 @@ export default class ApiClient {
       credentials: "same-origin", // include, *same-origin, omit
       headers: {
         "Content-Type": "application/json",
-        Authorization: this.authToken
-          ? `Bearer ${this.authToken}`
-          : this.authToken,
+        'auth-token': this.authToken
       },
       referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
       ...(options || {}),

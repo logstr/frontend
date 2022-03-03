@@ -9,10 +9,10 @@ const useRequest = (requestFn) => {
   async function send(...params) {
     setStatus(HTTP_STATUSES.LOADING);
     try {
-      const {data} = await requestFn(...params);
-      setResponse(data);
+      const res = await requestFn(...params);
+      setResponse(res);
       setStatus(HTTP_STATUSES.SUCCESS);
-      return data;
+      return res;
     } catch(e) {
       setResponse(e);
       setStatus(HTTP_STATUSES.ERROR);
